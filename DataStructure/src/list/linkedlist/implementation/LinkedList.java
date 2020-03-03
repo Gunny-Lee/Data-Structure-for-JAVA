@@ -93,4 +93,15 @@ public class LinkedList {
 		
 		return str + "]"; // 괄호 닫고 출력
 	}
+	
+	// 2일차
+	public Object removeFirst() { // 첫번째 노드 삭제
+		Node temp = head; // 노드 탐색을 위해 첫번째 노드를 temp로 임명
+		head = temp.next; // 삭제 전에 head를 미리 두 번째 노드로 변경
+		
+		Object returnData = temp.data; // 삭제된 값을 마지막에 리턴하여 보여주기 위한 임시 저장
+		temp = null; // 여기서 최종 삭제
+		size--; // 삭제했으니 사이즈 줄임
+		return returnData; // 뭘 삭제했는지 보여줌
+	}
 }
