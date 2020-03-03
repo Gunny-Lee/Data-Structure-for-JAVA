@@ -1,5 +1,8 @@
 package array;
 
+import java.util.ArrayList;
+import java.util.LinkedList;
+
 public class ideone {
 
 	public static void main(String[] args) {
@@ -43,6 +46,28 @@ public class ideone {
 		// 배열의 한계는, 배열의 크기변경이 안되고 엘리먼트의 갯수를 알수 없음
 		// 역으로 배열의 장점이기도 함
 		
-		// 생활코딩 내용 정리
+		
+		// List의 개념 -> 배열은 length와 index가 고정된 느낌이라면, List는 데이터 사이의 순서를 통해 가변적으로 연결되는 개념
+		// 리스트는 배열에 비해 자유로운 엘리먼트 추가/제거가 가능(value 갯수가 유동적으로 변화)
+		
+		ArrayList numbers = new ArrayList();
+		numbers.add(10);
+		numbers.add(20);
+		numbers.add(30);
+		numbers.add(40);
+		numbers.add(50);
+		numbers.remove(3);
+		System.out.println(numbers); // 중간에 4번째 원소를 제거하면 배열은 null이 남지만, 리스트는 아예 제거됨
+		
+		LinkedList numberss = new LinkedList();
+		numberss.add(10);
+		numberss.add(20);
+		numberss.add(30);
+		numberss.add(40);
+		numberss.add(50);
+		numberss.remove(3);
+		System.out.println(numberss); // LinkedList의 경우, ArrayList에 비해 추가/삭제가 빠른 대신 인덱스 조회가 느림
+		
 	}
 }
+// 생활코딩 내용 정리
